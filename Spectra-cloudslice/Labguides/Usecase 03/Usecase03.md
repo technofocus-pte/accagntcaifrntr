@@ -17,11 +17,13 @@ onboarding tasks end-to-end.
 
 **Solution architecture**
 
-[TABLE]
+![A screenshot of a computer AI-generated content may be
+incorrect.](./media/a1.png)
 
 **Agentic architecture**
 
-[TABLE]
+![A screenshot of a computer AI-generated content may be
+incorrect.](./media/a2.png)
 
 **Objective**
 
