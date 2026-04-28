@@ -1,4 +1,0 @@
-"ClaimID,OrderID,ClaimType,ClaimAmount,ClaimStatus,SubmittedDate,ApprovedDate,Comments"
-"RC1001,O5001,Replacement,0,Pending,2026-04-01,,Pending review for damaged and missing units"
-"RC1002,O5002,PartialRefund,13000,Approved,2026-04-03,2026-04-04,Approved due to delayed monitor delivery"
-"RC1003,O4992,Replacement,0,Closed,2026-02-18,2026-02-19,Replacement completed"
