@@ -1,8 +1,0 @@
-"TrackingID,OrderID,ShipmentStage,StageTimestamp,Location,Carrier,StatusNote"
-"TR8001,O5001,Picked,2026-03-27 09:15,Chennai DC,BlueDart,Shipment picked from warehouse"
-"TR8002,O5001,Packed,2026-03-27 13:40,Chennai DC,BlueDart,Partial carton discrepancy not detected at packing"
-"TR8003,O5001,In Transit,2026-03-28 08:10,Chennai Hub,BlueDart,Shipment moving to destination"
-"TR8004,O5001,Out for Delivery,2026-04-01 08:25,Chennai,BlueDart,Final-mile dispatch initiated"
-"TR8005,O5001,Delivered,2026-04-01 14:55,Chennai,BlueDart,Customer reported shortage and damage after delivery"
-"TR8006,O5003,In Transit,2026-04-02 11:30,Bengaluru,Delhivery,Shipment on route to destination"
-"TR8007,O5005,Delivered,2026-04-04 10:45,Coimbatore,BlueDart,Delivered successfully"
