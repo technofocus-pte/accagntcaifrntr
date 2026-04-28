@@ -1,8 +1,0 @@
-"OrderItemID,OrderID,SKU,ProductName,QuantityOrdered,QuantityDelivered,UnitPrice,LineTotal"
-"OI9001,O5001,LT100,Contoso ProBook 14,25,18,15000,375000"
-"OI9002,O5002,MN200,Contoso UltraView Monitor,10,10,6500,65000"
-"OI9003,O5003,KB300,Contoso Wireless Keyboard,40,0,1800,72000"
-"OI9004,O5004,MS400,Contoso Precision Mouse,30,30,1800,54000"
-"OI9005,O5005,LT200,Contoso ProBook 16,12,12,15000,180000"
-"OI9006,O5006,DK500,Contoso USB-C Dock,20,0,2100,42000"
-"OI9007,O4992,LT100,Contoso ProBook 14,10,10,15000,150000"
