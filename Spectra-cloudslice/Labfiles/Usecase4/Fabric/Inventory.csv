@@ -1,8 +1,0 @@
-"SKU,ProductName,Warehouse,AvailableUnits,ReservedUnits,ReorderStatus,WarehouseRegion,LastUpdated"
-"LT100,Contoso ProBook 14,Chennai DC,42,10,Healthy,South,2026-04-02"
-"LT100,Contoso ProBook 14,Bangalore DC,8,5,Low,South,2026-04-02"
-"LT200,Contoso ProBook 16,Hyderabad DC,15,4,Healthy,South,2026-04-02"
-"MN200,Contoso UltraView Monitor,Mumbai DC,23,4,Healthy,West,2026-04-02"
-"KB300,Contoso Wireless Keyboard,Hyderabad DC,90,12,Healthy,South,2026-04-02"
-"MS400,Contoso Precision Mouse,Delhi DC,60,8,Healthy,North,2026-04-02"
-"DK500,Contoso USB-C Dock,Pune DC,34,6,Healthy,West,2026-04-02"
