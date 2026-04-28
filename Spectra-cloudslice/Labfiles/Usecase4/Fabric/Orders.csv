@@ -1,8 +1,0 @@
-"OrderID,CustomerID,OrderDate,Status,Priority,TotalAmount,PromisedDeliveryDate,ShippingMethod,BillingCity,ShippingCity"
-"O5001,C1001,2026-03-25,Partially Delivered,High,375000,2026-04-04,Standard Freight,Chennai,Chennai"
-"O5002,C1002,2026-03-28,Delivered,Medium,65000,2026-04-03,Express,Madurai,Madurai"
-"O5003,C1003,2026-03-29,In Transit,High,72000,2026-04-05,Express,Bengaluru,Bengaluru"
-"O5004,C1004,2026-03-27,Delivered,Low,54000,2026-04-02,Standard Freight,Delhi,Delhi"
-"O5005,C1005,2026-03-30,Delivered,High,180000,2026-04-04,Express,Coimbatore,Coimbatore"
-"O5006,C1006,2026-03-31,Processing,Medium,42000,2026-04-06,Ground,Pune,Pune"
-"O4992,C1001,2026-02-12,Delivered,Medium,150000,2026-02-18,Standard Freight,Chennai,Chennai"
