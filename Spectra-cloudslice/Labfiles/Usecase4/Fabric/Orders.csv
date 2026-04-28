@@ -1,0 +1,11 @@
+OrderID,CustomerID,OrderDate,OrderStatus,TotalAmount
+101,C001,2024-01-10,Delivered,2400
+102,C002,2024-01-11,Shipped,125
+103,C003,2024-01-12,Processing,135
+104,C004,2024-01-13,Delivered,300
+105,C005,2024-01-14,Cancelled,600
+106,C006,2024-01-15,Delivered,1000
+107,C007,2024-01-16,Shipped,700
+108,C008,2024-01-17,Processing,480
+109,C009,2024-01-18,Delivered,500
+110,C010,2024-01-19,Shipped,2700

@@ -1,0 +1,11 @@
+ClaimID,OrderID,Reason,ClaimStatus,ClaimDate
+1,101,Damaged product,Approved,2024-01-15
+2,102,Wrong item,Rejected,2024-01-16
+3,103,Late delivery,Pending,2024-01-17
+4,104,Defective,Approved,2024-01-18
+5,105,Not needed,Rejected,2024-01-19
+6,106,Missing parts,Approved,2024-01-20
+7,107,Wrong size,Pending,2024-01-21
+8,108,Damaged packaging,Approved,2024-01-22
+9,109,Quality issue,Pending,2024-01-23
+10,110,Duplicate order,Rejected,2024-01-24

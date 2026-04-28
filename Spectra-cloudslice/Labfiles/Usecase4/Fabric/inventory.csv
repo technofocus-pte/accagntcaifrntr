@@ -1,0 +1,11 @@
+InventoryID,ProductID,ProductName,Category,StockQuantity,WarehouseLocation,LastUpdated
+1,P1001,Laptop,Electronics,50,Bangalore,2024-01-10
+2,P1002,Mouse,Electronics,200,Hyderabad,2024-01-11
+3,P1003,Keyboard,Electronics,150,Chennai,2024-01-12
+4,P1004,Monitor,Electronics,75,Mumbai,2024-01-13
+5,P1005,Chair,Furniture,120,Delhi,2024-01-14
+6,P1006,Desk,Furniture,60,Pune,2024-01-15
+7,P1007,Printer,Electronics,40,Kolkata,2024-01-16
+8,P1008,Scanner,Electronics,30,Ahmedabad,2024-01-17
+9,P1009,Tablet,Electronics,90,Jaipur,2024-01-18
+10,P1010,Phone,Electronics,300,Bangalore,2024-01-19

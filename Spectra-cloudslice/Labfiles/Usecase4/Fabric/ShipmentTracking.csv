@@ -1,0 +1,11 @@
+TrackingID,OrderID,ShipmentStatus,ShippedDate,DeliveryDate
+1,101,Shipped,2024-01-11,2024-01-14
+2,102,In Transit,2024-01-12,2024-01-16
+3,103,Pending,2024-01-13,2024-01-18
+4,104,Delivered,2024-01-14,2024-01-17
+5,105,Cancelled,2024-01-15,2024-01-19
+6,106,Delivered,2024-01-16,2024-01-20
+7,107,In Transit,2024-01-17,2024-01-21
+8,108,Pending,2024-01-18,2024-01-22
+9,109,Delivered,2024-01-19,2024-01-23
+10,110,Shipped,2024-01-20,2024-01-24
