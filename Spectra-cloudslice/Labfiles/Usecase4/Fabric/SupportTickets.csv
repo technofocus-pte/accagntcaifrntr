@@ -1,6 +1,0 @@
-"TicketID,CustomerID,OrderID,IssueCategory,Severity,CreatedDate,Status,AssignedTeam,ResolutionSummary"
-"T3001,C1001,O5001,Shipment Issue,Critical,2026-04-01,Open,Operations,Pending shipment investigation and replacement decision"
-"T3002,C1002,O5002,Delivery Delay,Medium,2026-04-03,Closed,Support,Customer informed and issue closed"
-"T3003,C1001,O4992,Device Damage,High,2026-02-18,Closed,Operations,Replacement units shipped successfully"
-"T3004,C1005,O5005,Packaging Concern,Low,2026-04-04,Closed,Support,No replacement required"
-"T3005,C1003,O5003,Shipment Tracking,Medium,2026-04-02,Open,Logistics,Customer requested ETA update"
