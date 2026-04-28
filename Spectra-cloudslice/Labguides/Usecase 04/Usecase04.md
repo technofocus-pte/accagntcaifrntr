@@ -310,7 +310,10 @@ reports.
     the following URL: +++https://app.fabric.microsoft.com/+++
     then press the **Enter** button and sign in with your credentials
 
-[TABLE]
+| Field    | Value                                              |
+|----------|----------------------------------------------------|
+| Username | +++@lab.CloudPortalCredential(User1).Username+++   |
+| Password | +++@lab.CloudPortalCredential(User1).Password+++   |
 
 2.  In the Workspaces pane, click on **+New workspace** tile
 
@@ -320,7 +323,11 @@ reports.
 3.  In the **Create a workspace** pane that appears on the right side,
     enter the following details, and click on the **Apply** button.
 
-[TABLE]
+| Field     | Value                                                     |
+|-----------|-----------------------------------------------------------|
+| Name      | +++Fabric IQ OntologyXXXX+++ (XXXX can be a unique number) |
+| Advanced  | Under License mode, select Fabric                         |
+| Default   | Small dataset storage format                              |
 
 > ![A screenshot of a computer AI-generated content may be
 > incorrect.](./media/image44.png)
@@ -540,7 +547,12 @@ incorrect.](./media/image46.png)
     entity has a static data binding with the default columns from its
     source table.
 
-[TABLE]
+| Entity type name        | Source table in IQ_Lakehouse | Entity type key |
+|-------------------------|------------------------------|-----------------|
+| OrderItem               | OrderItems                   | OrderItemID     |
+| SupportTicket           | SupportTickets               | TicketID        |
+| RefundClaim             | RefundClaims                 | ClaimID         |
+| ShipmentTrackingEvent   | ShipmentTracking             | TrackingID      |
 
 > ![](./media/image88.png)
 >
@@ -598,7 +610,13 @@ table. Continue to the next section to create another relationship type.
 4.  Follow the same steps that you used for the first relationship type
     to create the relationship type described in the following table.
 
-[TABLE]
+| Relationship type name | Source data table                          | Source entity type        |
+|------------------------|--------------------------------------------|---------------------------|
+| Contains               | Tutorial workspace → Lakehouse → Order     | Products (OrderItem)      |
+| hasSupportTicket       | Order                                      | SupportTicket             |
+| hasTrackingEvent       | Order                                      | ShipmentTrackingEvent     |
+| mayLeadTo              | OrderItem                                  | RefundClaim               |
+| hasInventory           | OrderItem                                  | InventoryRecord           |
 
 > ![](./media/image100.png)
 >
