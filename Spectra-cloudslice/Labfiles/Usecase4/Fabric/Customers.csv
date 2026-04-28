@@ -1,7 +1,0 @@
-"CustomerID,CustomerName,Segment,SLA,Region,AccountManager,PrimaryContactName,PrimaryContactEmail,CustomerStatus"
-"C1001,Apex Legal Solutions,Enterprise,Premium,East,Maya Krishnan,Ritika Sharma,itprocurement@apexlegal.com,Active"
-"C1002,Greenfield Retail Pvt Ltd,SMB,Standard,South,Daniel Ross,Anil Kapoor,ops@greenfieldretail.com,Active"
-"C1003,Northwind Consulting,Enterprise,Premium,West,Priya Narayanan,Meera Sethi,procurement@northwindconsulting.com,Active"
-"C1004,BluePeak Logistics,MidMarket,Standard,North,Arun Menon,Harish Patel,support@bluepeaklogistics.com,Active"
-"C1005,Silverline Health Systems,Enterprise,Premium,South,Neha Iyer,Divya Menon,it@silverlinehealth.com,Active"
-"C1006,UrbanHive Coworking,SMB,Standard,West,Rohan Das,Ajay Verma,admin@urbanhive.com,Active"
