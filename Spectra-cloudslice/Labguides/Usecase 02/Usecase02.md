@@ -187,7 +187,7 @@ incorrect.](./media/image17.png)
 1.  Open your browser, navigate to the address bar, type or paste the
     following URL: 
 
-+++https://github.com/technofocus-pte/MultiAgent-Solution-Accelerator.git+++
++++https://github.com/technofocus-pte/MultiAIAgentAccelerator+++
 
 ![](./media/image20.png)
 
