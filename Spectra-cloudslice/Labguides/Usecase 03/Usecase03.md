@@ -101,7 +101,7 @@ In this task, we will identify and understand the credentials that we will be us
 
 ### Task 2: Open Github Codespaces environment
 
-1. Open your browser, navigate to the address bar, type or paste the following URL: +++https://github.com/technofocus-pte/MultiAgent-CustomAutomatiSolution-Acceleratoron-Engine+++
+1. Open your browser, navigate to the address bar, type or paste the following URL: +++https://github.com/technofocus-pte/MultiAgent-customaccelerator+++
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2003/media/image12.png)
 
