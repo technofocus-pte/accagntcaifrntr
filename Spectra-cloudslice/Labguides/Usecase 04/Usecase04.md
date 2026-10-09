@@ -77,7 +77,7 @@ In this exercise, you will create an Azure AI Search resource from the Azure por
 1. Enter the below details and select **Review + create (4)**.
 
     - Subscription - Select your **assigned subscription**
-    - Service name - **searchleaves2306402 (1)**
+    - Service name - **searchleaves@lab.LabInstance.Id (1)**
     - Resource group - **AgenticAI (2)**
     - Location - **Central US (3)**
 
@@ -125,7 +125,7 @@ In this exercise, you will create an Azure AI Search resource from the Azure por
 
     - Subscription - Select your **assigned subscription**
     - Resource group - **AgenticAI (1)**
-    - Storage account name - **storage2306402 (2)**
+    - Storage account name - **storage@lab.LabInstance.Id (2)**
     - Region - **Central US (3)**
     - Primary service - Select **Azure Blob Storage or Azure Data Lake
     Storage (4)**
@@ -165,7 +165,7 @@ In this exercise, you will create an Azure AI Search resource from the Azure por
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image23.png)
 
-1. Navigate to the **storage2306402** Storage account (Select **Storageaccounts** from the **Home page** of the Azure portal and select **Access Control (IAM)** from the left pane. Select **Add -\> Add role assignment**).
+1. Navigate to the **storage@lab.LabInstance.Id** Storage account (Select **Storageaccounts** from the **Home page** of the Azure portal and select **Access Control (IAM)** from the left pane. Select **Add -\> Add role assignment**).
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image24.png)
 
@@ -203,9 +203,9 @@ In this task, you will create a Foundry resource which is required to access the
 1. Enter the below details and select **Review + create (5)**.
 
     - Resource group - **AgenticAI (1)**
-    - Name - **+++agentic-2306402+++ (2)**
+    - Name - **+++agentic-@lab.LabInstance.Id+++ (2)**
     - Region - Keep region as default
-    - Default project name- **+++agentic-ai-project-2306402+++ (4)**
+    - Default project name- **+++agentic-ai-project-@lab.LabInstance.Id+++ (4)**
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image31.png)
 
@@ -222,7 +222,7 @@ In this task, you will create a Foundry resource which is required to access the
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image34.png)
 
-1. Open the **agentic-ai-project-2306402** and select **Go to Foundry portal**.
+1. Open the **agentic-ai-project-@lab.LabInstance.Id** and select **Go to Foundry portal**.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image35.png)
 
@@ -291,14 +291,14 @@ In this task, you create a Fabric workspace. The workspace contains all the item
 
 1. In the **Create a workspace** pane that appears on the right side, enter the following details, and click on the **Apply** button.
 
-    - Name: +++Fabric IQ Ontology-2306402+++ (1)**
+    - Name: +++Fabric IQ Ontology-@lab.LabInstance.Id+++ (1)**
     - Expand the **Advanced (2)** section to configure additional
     workspace settings.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image48.png)
 
 
-1. Select the **Fabric** as workspace type +++(1)+++, choose the appropriate **capacity-2306402** **(2)**, ensure **Small semantic model storage format** **(3)** is selected, and then click **Apply** **(4)** to create the workspace.
+1. Select the **Fabric** as workspace type +++(1)+++, choose the appropriate **capacity-@lab.LabInstance.Id** **(2)**, ensure **Small semantic model storage format** **(3)** is selected, and then click **Apply** **(4)** to create the workspace.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image49.png)
 
@@ -743,7 +743,7 @@ Follow these steps to create a new data agent that connects to your ontology (pr
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image123.png)
 
-1. Select the **Foundry IQ resource** as **searchleaves2306402 (1)** from the drop-down, ensure **API Key** **(2)** is chosen as the authentication type, and then click **Connect** **(3)** to establish the connection with the Foundry IQ knowledge base.
+1. Select the **Foundry IQ resource** as **searchleaves@lab.LabInstance.Id (1)** from the drop-down, ensure **API Key** **(2)** is chosen as the authentication type, and then click **Connect** **(3)** to establish the connection with the Foundry IQ knowledge base.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2004/media/image124.png)
 
@@ -826,7 +826,7 @@ Follow these steps to create a new data agent that connects to your ontology (pr
 
 1. Enter the following details to draft an email:
 
-    - **To (1)**: +++odl_user_2306402@sandboxailabs1012.onmicrosoft.com+++
+    - **To (1)**: +++odl_user_@lab.LabInstance.Id@sandboxailabs1012.onmicrosoft.com+++
 
 
 ## Email 1:
