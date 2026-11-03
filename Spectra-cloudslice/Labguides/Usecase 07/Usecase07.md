@@ -41,11 +41,11 @@ This task introduces you to the process of setting up your Microsoft Foundry pro
 
 Follow the steps below to complete the setup of your Microsoft Foundry project.
 
-1. Open a new tab and copy and navigate to this link +++https://ai.azure.com/templates+++.
+1. Open a new tab and copy and navigate to this link +++https://ai.azure.com/templates+++
 
 1. You should see a dialog box prompting you to select a project to continue.
 
-1. Replace the existing project name with +++Contoso-Travel-2306402+++ and click on **Create** to set up your Microsoft Foundry project.
+1. Replace the existing project name with `Contoso-Travel-@lab.labinstance.id` and click on **Create** to set up your Microsoft Foundry project.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image1.png)
 
@@ -68,7 +68,7 @@ In this task, you will create your first AI agent within the Foundry environment
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image4.png)
 
-1. Click on **Deploy (1)** and select **Default settings (2)** from the dropdown.
+1. Click on **Deploy (1)** and select **Custom settings (2)** from the dropdown. Name the base model `contoso-travel-1`.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image5.png)
 
@@ -76,7 +76,7 @@ In this task, you will create your first AI agent within the Foundry environment
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image6.png)
 
-1. Enter the Agent name as +++**contoso-travel-portal+++ (1)** and click on **Create (2)** to create the Agent.
+1. Enter the Agent name as `contoso-travel-portal` (1) and click on **Create (2)** to create the Agent.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image7.png)
 
@@ -89,7 +89,7 @@ This task focuses on enabling observability for your AI solution. By creating an
 
 1. Navigate to the Azure Portal.
 
-1. In the search bar, type **Resource group (1)** and select **Resource groups (2)** from the results.
+1. In the search bar, type `Resource group` (1) and select **Resource groups (2)** from the results.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image8.png)
 
@@ -177,9 +177,9 @@ In this task, you will refine and test your agent’s behavior using prompt engi
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image16.png)
 
-1. Enter the below in the chat panel and hit +++Send+++.
+1. Enter the below in the chat panel and hit Send.
 
-    Hi, I'm thinking about planning a trip to Paris. What should I know?
+    `Hi, I'm thinking about planning a trip to Paris. What should I know?`
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image17.png)
 
@@ -193,7 +193,7 @@ In this task, you will refine and test your agent’s behavior using prompt engi
 
 1. Run the same prompt again & observe the response.
 
-    +++Hi. I'm thinking about planning a trip to Paris. What should I know?+++
+    `Hi. I'm thinking about planning a trip to Paris. What should I know?`
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image20.png)
 
@@ -211,16 +211,16 @@ In this task, you will refine and test your agent’s behavior using prompt engi
 
 1. Enter the following details:
 
-    - **Display name (1)**: +++Contoso Travel Assistant+++
+    - **Display name (1)**: `Contoso Travel Assistant`
     - **Description (2)**
-    +++Welcome to Contoso Travel. We can help you plan your next itinerary with flight bookings, car rentals and hotel reservations. Just tell us your destination and the number of travelers in your group - and we'll do the rest.+++
+    `Welcome to Contoso Travel. We can help you plan your next itinerary with flight bookings, car rentals and hotel reservations. Just tell us your destination and the number of travelers in your group - and we'll do the rest.`
     - **Starter prompts (3)**
 
-    +++I want to plan a multi-day travel itinerary.+++
+    `I want to plan a multi-day travel itinerary.`
 
-    +++I want to rent a car at my travel destination.+++
+    `I want to rent a car at my travel destination.`
 
-    +++I want to book a flight and hotel for my travels.+++
+    `I want to book a flight and hotel for my travels.`
 
     - Click on **Reset (4)**
 
@@ -241,7 +241,7 @@ In this task, you will refine and test your agent’s behavior using prompt engi
 
 1. Enter the following promot in the same chat and click on the **Submit icon** .
 
-    +++Hi! I'm thinking about planning a trip to Paris from Jul 1–4 with my family (3 people total). We are vegetarian. We love sports, historic homes, art and food tours.+++
+    `Hi! I'm thinking about planning a trip to Paris from Jul 1–4 with my family (3 people total). We are vegetarian. We love sports, historic homes, art and food tours.`
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image26.png)
 
@@ -312,7 +312,7 @@ By now you should have a sense for the *Tracing* and *Evaluations* capabilities 
 
 1. Provide the following details:
 
-    - Enter **Evaluator name** as +++customevaluator (1)+++
+    - Enter **Evaluator name** as `customevaluator` (1)
     - Select **Model** as **gpt-5.2 (2)**
     - Choose **Target agent (Optional)** as **contoso-travel-portal
     (3)**
@@ -354,9 +354,7 @@ In this exercise, you will transition from a UI-based approach to a code-first a
 
 This task involves setting up a cloud-based development environment using GitHub Codespaces. You will fork the provided repository, launch a Codespace, and prepare your workspace for development.
 
->[!Note] You are expected to have your own GitHub login credentials. If you do not have an account, please create one by visiting below shared URL:
-
-https://github.com/signup?user_email=&source=form-home-signup
+>[!Note] You are expected to have your own GitHub login credentials. If you do not have an account, please create one by visiting below shared URL: +++https://github.com/signup?user_email=&source=form-home-signup+++
 
 1. Open your browser, navigate to the address bar, type or paste the following URL:
 
@@ -368,7 +366,7 @@ https://github.com/signup?user_email=&source=form-home-signup
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image45.png)
 
-1. Replace the name with **Foundry-Control-2306402 (1)** and click on **Create Fork (2)** .
+1. Replace the name with `Foundry-Control-2306402` (1) and click on **Create Fork (2)** .
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image46.png)
 
@@ -414,7 +412,7 @@ https://github.com/signup?user_email=&source=form-home-signup
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image56.png)
 
-1. Enter the resource group as +++AgenticAI+++.
+1. Enter the resource group as `AgenticAI`.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2007/media/image57.png)
 

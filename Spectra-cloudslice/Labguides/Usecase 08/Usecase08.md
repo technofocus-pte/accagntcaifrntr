@@ -101,7 +101,7 @@ In this task, we will identify and understand the credentials that we will be us
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image7.png)
 
-1. Expand Settings from the left navigation menu. Click on **Resource providers**, enter +++Microsoft.CognitiveServices+++ and select it, and then click **Register**.
+1. Expand Settings from the left navigation menu. Click on **Resource providers**, enter `Microsoft.CognitiveServices` and select it, and then click **Register**.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image8.png)
 
@@ -111,12 +111,12 @@ In this task, we will identify and understand the credentials that we will be us
 
 1. Repeat the steps #4 to register the following Resource provider.
 
-    - +++Microsoft.AlertsManagement+++
+    - `Microsoft.AlertsManagement`
 
 
 ### Task 2: Retrieve resource group name and location
 
-1. Type in +++Resource group+++ in the search bar and select **Resource groups**.
+1. Type in `Resource group` in the search bar and select **Resource groups**.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image11.png)
 
@@ -300,7 +300,7 @@ In this task, we will identify and understand the credentials that we will be us
 
 1. In the **agent-template-assistant** web app page, enter the following text and click on the **Submit icon** as shown in the below image.
 
-    +++What's the best tent under $200 for two people, and what features does it include?+++
+    `What's the best tent under $200 for two people, and what features does it include?`
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image51.png)
 
@@ -308,19 +308,19 @@ In this task, we will identify and understand the credentials that we will be us
 
 1. In the **agent-template-assistant** web app page, enter the following text and click on the **Submit icon** as shown in the below image.
 
-    +++What has David Kim purchased in the past, and based on his buying patterns, what other products might interest him?+++
+    `What has David Kim purchased in the past, and based on his buying patterns, what other products might interest him?`
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image53.png)
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image54.png)
 
-    +++Compare hiking boots from different brands in your inventory - which ones offer the best value for durability and comfort?+++
+    `Compare hiking boots from different brands in your inventory - which ones offer the best value for durability and comfort?`
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image55.png)
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image56.png)
 
-    +++How do I set up the Alpine Explorer Tent, and what should I know about its weather protection features?+++
+    `How do I set up the Alpine Explorer Tent, and what should I know about its weather protection features?`
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image57.png)
 
@@ -328,7 +328,7 @@ In this task, we will identify and understand the credentials that we will be us
 
 1. In the **agent-template-assistant** web app page, enter the following text and click on the **Submit icon** as shown in the below image.
 
-    +++I'm planning a 3-day camping trip for my family. What complete setup would you recommend under $500, and why?+++
+    `I'm planning a 3-day camping trip for my family. What complete setup would you recommend under $500, and why?`
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image59.png)
 
@@ -343,7 +343,7 @@ In this task, we will identify and understand the credentials that we will be us
 
 1. In the **agent-template-assistant** web app page, enter the following text and click on the **Submit icon** as shown in the below image.
 
-    +++Which products have wireless charging capabilities and what are their battery life specifications?+++
+    `Which products have wireless charging capabilities and what are their battery life specifications?`
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image62.png)
 
@@ -351,7 +351,7 @@ In this task, we will identify and understand the credentials that we will be us
 
     `Find products designed for comfort and temperature control - what features do they offer?`
 
-    +++What care and maintenance instructions are available for electronic products with waterproof features?+++
+    `What care and maintenance instructions are available for electronic products with waterproof features?`
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image64.png)
 

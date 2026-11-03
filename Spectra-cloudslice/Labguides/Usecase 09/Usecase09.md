@@ -56,7 +56,7 @@ By completing this lab, you will be able to:
 
     Username: +++@lab.CloudPortalCredential(User1).Username+++
 
-    Password: +++@lab.CloudPortalCredential(User1).AccessToken+++
+    TAP: +++@lab.CloudPortalCredential(User1).AccessToken+++
 
     ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image1.png)
 
@@ -70,7 +70,7 @@ By completing this lab, you will be able to:
 
     ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image4.png)
 
-1. Expand Settings from the left navigation menu. Click on **Resource providers**, enter +++Microsoft.CognitiveServices+++ and select it, and then click **Register**.
+1. Expand Settings from the left navigation menu. Click on **Resource providers**, enter `Microsoft.CognitiveServices` and select it, and then click **Register**.
 
     ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image5.png)
 
@@ -80,12 +80,12 @@ By completing this lab, you will be able to:
 
 1. Repeat the steps #4 to register the following Resource provider.
 
-    - +++Microsoft.AlertsManagement+++
+    - `Microsoft.AlertsManagement`
 
 
 ### Task 2: Retrieve resource group name and location
 
-1. Type in +++Resource group+++ in the search bar and select **Resource groups**.
+1. Type in `Resource group` in the search bar and select **Resource groups**.
 
     ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image8.png)
 
@@ -149,23 +149,23 @@ By completing this lab, you will be able to:
 
 1. Then complete the interactive steps providing responses like this:
 
-    1. Enter branch name: +++for-release-1.0.4+++
+    1. Enter branch name: `for-release-1.0.4`
 
-    1. Enter environment name: +++Ignite-PREL13+++
+    1. Enter environment name: `Ignite-PREL13`
 
-    1. Enter Azure region: +++@lab.CloudResourceGroup(AgenticAI).Location+++
+    1. Enter Azure region: `lab.CloudResourceGroup(AgenticAI).Location`
 
-    1. Enter Subscription ID: +++@lab.CloudSubscription.Id+++
+    1. Enter Subscription ID: `lab.CloudSubscription.Id`
 
     1. Do you want to activate Azure AI Search? (yes/no): yes
   
-    1. Enter existing Resource Group Name: +++@lab.CloudResourceGroup(AgenticAI).Name+++
+    1. Enter existing Resource Group Name: `lab.CloudResourceGroup(AgenticAI).Name`
   
-    1. Azure OpenAI Service Name: +++aoai@lab.LabInstance.Id+++
+    1. Azure OpenAI Service Name: `aoai@lab.LabInstance.Id`
   
-    1. Storage Account Name: +++st@lab.LabInstance.Id+++
+    1. Storage Account Name: `st@lab.LabInstance.Id`
   
-    1. Azure AI Search Service Name: +++aisearch@lab.LabInstance.Id+++
+    1. Azure AI Search Service Name: `aisearch@lab.LabInstance.Id`
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image22.png)
 
@@ -229,7 +229,7 @@ By completing this lab, you will be able to:
     
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image28.png)
 
-1. When prompted, type +++y+++ and press Enter to log in to Azure before continuing with the deployment.
+1. When prompted, type `y` and press Enter to log in to Azure before continuing with the deployment.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image29.png)
 
@@ -248,7 +248,7 @@ By completing this lab, you will be able to:
 
     ![A screenshot of a computer error AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image19.png)
 
-1. This deployment will take *12-15minutes* to provision the resources in your account and set up the solution with sample data.
+1. This deployment will take *12-15 minutes* to provision the resources in your account and set up the solution with sample data.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image32.png)
 
@@ -283,7 +283,7 @@ By completing this lab, you will be able to:
 
 1. In the **agent-template-assistant** web app page, enter the following text and click on the **Submit icon** as shown in the below image.
 
-    +++Can you help me choose the best tools for painting my house?+++
+    `Can you help me choose the best tools for painting my house?~
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image41.png)
 
@@ -291,7 +291,7 @@ By completing this lab, you will be able to:
 
 1. In the **agent-template-assistant** web app page, enter the following text and click on the **Submit icon** as shown in the below image.
 
-    +++What are the cheapest products available?+++
+    `What are the cheapest products available?`
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image43.png)
 
@@ -299,7 +299,7 @@ By completing this lab, you will be able to:
 
 1. In the **agent-template-assistant** web app page, enter the following text and click on the **Submit icon** as shown in the below image.
 
-    +++Suggest eco-friendly paint options?+++
+    `Suggest eco-friendly paint options?`
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image45.png)
 
@@ -307,7 +307,7 @@ By completing this lab, you will be able to:
 
 1. In the **agent-template-assistant** web app page, enter the following text and click on the **Submit icon** as shown in the below image.
 
-    +++How much does the Synthetic Brush set cost and do you have it in stock?+++
+    `How much does the Synthetic Brush set cost and do you have it in stock?`
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image47.png)
 
@@ -320,11 +320,11 @@ By completing this lab, you will be able to:
 
     `az login`
 
-1. Run this script from root of repo - it will create .env with values extracted by Azure CLI. By default it looks for an +++rg-Ignite-@lab.LabInstance.Id+++ resource group but you can override it.
+1. Run this script from root of repo - it will create .env with values extracted by Azure CLI. By default it looks for an `rg-Ignite-@lab.LabInstance.Id` resource group but you can override it.
 
     >[!Note] Right click on the *1-update-env-selfguided.sh* and select **open in integrated terminal**.
 
-    +++./1-update-env-selfguided.sh+++
+    `./1-update-env-selfguided.sh`
 
 1. Enter the resourcegroup @lab.CloudResourceGroup(AgenticAI).Name and select **Enter** to use the default **Agent Name**.
 
