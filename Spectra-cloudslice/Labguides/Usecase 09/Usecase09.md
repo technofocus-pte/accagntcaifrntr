@@ -1,6 +1,6 @@
 <!--
 lab:
-  title: Usecase 9 - Implement end to end agent operations for Zava’s shopping assistant in Microsoft Foundry
+  title: Usecase 9 - Implement end to end agent operations for Zava's shopping assistant in Microsoft Foundry
   description: In this lab, you implemented a complete end-to-end AI solution for a retail assistant using Azure AI Foundry. Starting from environment setup and deployment, you built Cora, enhanced it with search capabilities, and evolved it into a multi-agent system.
   duration: 15 minutes
   level: 400
@@ -10,11 +10,11 @@ lab:
     - Microsoft Foundry
 -->
 
-# Usecase 9 - Implement end to end agent operations for Zava’s shopping assistant in Microsoft Foundry
+# Usecase 9 - Implement end to end agent operations for Zava's shopping assistant in Microsoft Foundry
 
 ## Introduction
 
-This lab demonstrates how to implement **end-to-end agent operations** using Azure AI Foundry by building an intelligent retail assistant named **Cora** for Zava, a home improvement retailer. It walks through the complete lifecycle of an AI solution—from provisioning Azure resources and deploying applications to building, orchestrating, and evaluating AI agents.
+This lab demonstrates how to implement **end-to-end agent operations** using Azure AI Foundry by building an intelligent retail assistant named **Cora** for Zava, a home improvement retailer. It walks through the complete lifecycle of an AI solution-from provisioning Azure resources and deploying applications to building, orchestrating, and evaluating AI agents.
 
 You will gain hands-on experience with Azure services such as **Azure AI Search, Azure AI Agent Service, and model evaluation tools**, enabling you to design scalable, intelligent, and production-ready AI applications.
 
@@ -198,9 +198,35 @@ By completing this lab, you will be able to:
     `cd ForBeginners/.azd-setup`
 
     `rm -f .env.lock`
+	
+
+    ```bash
+    azd env set AZURE_RESOURCE_GROUP AgenticAI
+    azd env set AZURE_LOCATION @lab.CloudResourceGroup(AgenticAI).Location
+    ```
+
+1. Update the template so it uses the existing **AgenticAI** resource group instead of trying to create it.
+
+    ```bash
+    F=$(find . -name main.bicep -path "*infra*" | head -1); echo "$F"
+    python3 - "$F" <<'EOF'
+    import re, sys, pathlib
+    p = pathlib.Path(sys.argv[1]); s = p.read_text()
+    s2, n = re.subn(
+        r"resource rg 'Microsoft\.Resources/resourceGroups@([^']+)' = \{\s*\n(\s*name:[^\n]*\n)\s*location:[^\n]*\n\s*tags:[^\n]*\n\s*\}",
+        r"resource rg 'Microsoft.Resources/resourceGroups@\1' existing = {\n\2}", s)
+    print('replaced:', n)
+    if n == 1: p.write_text(s2)
+    EOF
+    ```
+
+    Verify that the output shows **replaced: 1**.
 
     `azd up`
 
+
+
+    
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image28.png)
 
 1. When prompted, type +++y+++ and press Enter to log in to Azure before continuing with the deployment.
@@ -208,6 +234,9 @@ By completing this lab, you will be able to:
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image29.png)
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image30.png)
+
+    >[!Alert] If the deployment fails with **RequestConflict: Another operation is in progress**, wait 1-2 minutes and run `azd up` again. Resources that were already created are kept, and the deployment continues from where it stopped.
+
 
 1. Default browser opens to enter the generated code to verify. Enter the code and click **Next**.
 
@@ -359,7 +388,7 @@ In this task, you will configure and validate your development environment. This
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image63.png)
 
 
-### Task 8: Build “Cora for Zava” – An AI-Powered Retail Shopping Assistant Using Azure AI Agent Service
+### Task 8: Build "Cora for Zava" - An AI-Powered Retail Shopping Assistant Using Azure AI Agent Service
 
 **Cora** is a customer service chatbot for **Zava** - a fictitious retailer of home improvement goods for DIY enthusiasts. Zava offers a wide range of products including paint, power tools, hand tools, hardware, electrical supplies, and plumbing materials. Cora helps customers find products, check inventory, and provides personalized assistance for home improvement projects.
 
@@ -417,13 +446,13 @@ In this task, you will configure and validate your development environment. This
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image77.png)
 
-1. Run the cell to retrieve all messages from the conversation thread and display Cora’s response along with the user’s message in a formatted conversation view.
+1. Run the cell to retrieve all messages from the conversation thread and display Cora's response along with the user's message in a formatted conversation view.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image78.png)
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image79.png)
 
-1. Run the cell to define a helper function that sends a message to Cora, processes it using the agent, and retrieves the assistant’s response from the conversation thread.
+1. Run the cell to define a helper function that sends a message to Cora, processes it using the agent, and retrieves the assistant's response from the conversation thread.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image80.png)
 
@@ -486,13 +515,13 @@ In this task, you will configure and validate your development environment. This
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image99.png)
 
-1. Run the cell to test the Product Inventory Agent by sending a sample query, processing it with Azure AI Search, and displaying the agent’s response along with relevant citations.
+1. Run the cell to test the Product Inventory Agent by sending a sample query, processing it with Azure AI Search, and displaying the agent's response along with relevant citations.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image100.png)
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image101.png)
 
-1. Run the cell to test the Customer Service Agent by sending the same query, processing it with Azure AI Search, and displaying the agent’s response along with relevant citations.
+1. Run the cell to test the Customer Service Agent by sending the same query, processing it with Azure AI Search, and displaying the agent's response along with relevant citations.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image102.png)
 
@@ -640,7 +669,7 @@ In this task, you will configure and validate your development environment. This
 
 ### Task 13: Cora-For-Zava: Exploring AI Response Quality Evaluators
 
-**Cora** is a customer service chatbot for **Zava** - a fictitious retailer of home improvement goods for DIY enthusiasts. Cora must provide accurate, relevant, and coherent responses about hardware and home improvement products to Zava customers. This notebook helps you assess response quality using specialized evaluators for groundedness, relevance, coherence, fluency, and similarity—ensuring Cora meets the high standards expected in a production retail environment.
+**Cora** is a customer service chatbot for **Zava** - a fictitious retailer of home improvement goods for DIY enthusiasts. Cora must provide accurate, relevant, and coherent responses about hardware and home improvement products to Zava customers. This notebook helps you assess response quality using specialized evaluators for groundedness, relevance, coherence, fluency, and similarity-ensuring Cora meets the high standards expected in a production retail environment.
 
 1. Navigate to the **labs/** **4-evaluation/** folder and open the **42-evaluate-quality.ipynb** notebook to begin the environment setup lab.
 
