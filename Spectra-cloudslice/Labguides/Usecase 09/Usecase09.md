@@ -1,15 +1,3 @@
-<!--
-lab:
-  title: Usecase 9 - Implement end to end agent operations for Zava's shopping assistant in Microsoft Foundry
-  description: In this lab, you implemented a complete end-to-end AI solution for a retail assistant using Azure AI Foundry. Starting from environment setup and deployment, you built Cora, enhanced it with search capabilities, and evolved it into a multi-agent system.
-  duration: 15 minutes
-  level: 400
-  islab: true
-  primarytopics:
-    - Azure
-    - Microsoft Foundry
--->
-
 # Usecase 9 - Implement end to end agent operations for Zava's shopping assistant in Microsoft Foundry
 
 ## Introduction
@@ -153,7 +141,7 @@ By completing this lab, you will be able to:
 
     1. Enter environment name: `Ignite-PREL13`
 
-    1. Enter Azure region: `lab.CloudResourceGroup(AgenticAI).Location`
+    1. Enter Azure region: press **Enter** to accept the default (`swedencentral`)
 
     1. Enter Subscription ID: `lab.CloudSubscription.Id`
 
@@ -202,8 +190,10 @@ By completing this lab, you will be able to:
 
     ```bash
     azd env set AZURE_RESOURCE_GROUP AgenticAI
-    azd env set AZURE_LOCATION @lab.CloudResourceGroup(AgenticAI).Location
+    azd env set AZURE_LOCATION westus3
     ```
+
+    >[!Note] The template only accepts these regions: **eastus**, **eastus2**, **swedencentral**, **westus** or **westus3**. The resources are still deployed into the **@lab.CloudResourceGroup(AgenticAI).Name** resource group, even though the resource group itself is in a different region.
 
 1. Update the template so it uses the existing **AgenticAI** resource group instead of trying to create it.
 
@@ -224,9 +214,6 @@ By completing this lab, you will be able to:
 
     `azd up`
 
-
-
-    
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image28.png)
 
 1. When prompted, type `y` and press Enter to log in to Azure before continuing with the deployment.
@@ -237,6 +224,19 @@ By completing this lab, you will be able to:
 
     >[!Alert] If the deployment fails with **RequestConflict: Another operation is in progress**, wait 1-2 minutes and run `azd up` again. Resources that were already created are kept, and the deployment continues from where it stopped.
 
+    >[!Alert] If the deployment fails with **InvalidTemplate: ... The value '...' is not part of the allowed value(s)**, the region you set isn't supported by the template. Set one of the allowed regions and run `azd up` again:
+    >
+    > `azd env set AZURE_LOCATION westus3`
+    >
+    > `azd up`
+
+    >[!Alert] If the deployment fails with **InsufficientResourcesAvailable: The region '...' is currently out of the resources required to provision new services**, that region doesn't have capacity for one of the services right now (usually Azure AI Search). Switch to another allowed region and run `azd up` again:
+    >
+    > `azd env set AZURE_LOCATION eastus`
+    >
+    > `azd up`
+    >
+    > If that region is also out of capacity, try the next one in this order: **westus3**, **eastus**, **westus**, **eastus2**, **swedencentral**. Changing the region creates a new set of resources in the new region. Resources from the earlier attempt remain in the resource group and can be ignored.
 
 1. Default browser opens to enter the generated code to verify. Enter the code and click **Next**.
 
@@ -335,6 +335,8 @@ By completing this lab, you will be able to:
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2009/media/image51.png)
 
 1. We have Zava data in scripts/customization. Let's create a product index in Azure AI Search. Switch to the scripts/ folder and run the command:
+	
+    `pip install pandas python-dotenv azure-identity azure-search-documents openai`
 
     `python 2-add-product-index.py`
 
