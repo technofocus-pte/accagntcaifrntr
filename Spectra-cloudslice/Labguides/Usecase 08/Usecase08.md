@@ -180,17 +180,27 @@ In this task, we will identify and understand the credentials that we will be us
 
     `azd env new`
 
-1. It asks you to enter environment name. Enter +++aiagent@lab.LabInstance.Id+++ and press enter.
+1. It asks you to enter environment name. Enter +++zava@lab.LabInstance.Id+++ and press enter.
 
-    >[!Note] When creating an environment, ensure that the name consists of lowercase letters.
-  
+    >[!Note] Use lowercase letters, and do **not** start the environment name with `aiagent`. Names that start with `aiagent` make the template name resources after the lab instance ID (for example `st@lab.LabInstance.Id`), which the lab's Azure Policy blocks.
+
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image26.png)
 
-1. Run below command to provision the services to Azure, build your container.
+1. Run below command to set the resource group that the services will be deployed to.
 
     `azd env set AZURE_RESOURCE_GROUP @lab.CloudResourceGroup(AgenticAI).Name`
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image27.png)
+
+1. Update the template so it uses the existing **@lab.CloudResourceGroup(AgenticAI).Name** resource group instead of trying to create or update it. Run the following command from the root of the repo:
+
+    ```
+    python3 -c "import re,pathlib;p=pathlib.Path('infra/main.bicep');s=p.read_text();s2,n=re.subn(r\"(resource rg 'Microsoft\.Resources/resourceGroups@[^']+') = \{(\s*\n\s*name:[^\n]*\n)\s*location:[^\n]*\n\s*tags:[^\n]*\n(\s*\})\",r'\1 existing = {\2\3',s);print('replaced:',n);n==1 and p.write_text(s2)"
+    ```
+
+    Verify that the output shows **replaced: 1**.
+
+    >[!Note] If you skip this step, the deployment fails with **RequestDisallowedByPolicy: Resource '@lab.CloudResourceGroup(AgenticAI).Name' was disallowed by policy**.
 
 1. Run azd up - This will provision Azure resources
 
@@ -201,12 +211,15 @@ In this task, we will identify and understand the credentials that we will be us
 1. Select below values.
 
     - **Select an Azure Subscription to use** : @lab.CloudSubscription.Id
-    - **azureAiServiceLocation**: @lab.CloudResourceGroup(AgenticAI).Location
+    - **Enter a value for the 'location' infrastructure parameter**: **(Europe) Sweden Central (swedencentral)**
+
+    >[!Note] The template only accepts **eastus**, **eastus2**, **swedencentral**, **westus** or **westus3**. Your resource group's own region doesn't need to match. The resources are still deployed into **@lab.CloudResourceGroup(AgenticAI).Name**.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image29.png)
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image30.png)
 
+1. If you see a warning that **Role assignment permissions at the target scopes were not verified**, followed by **Proceed with deployment anyway?**, press **Enter** to select **Yes**.
 
 1. This deployment will take *7-10 minutes* to provision the resources in your account and set up the solution with sample data.
 
@@ -221,6 +234,8 @@ In this task, we will identify and understand the credentials that we will be us
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image35.png)
 
     ![](https://raw.githubusercontent.com/technofocus-pte/accagntcaifrntr/refs/heads/main/Spectra-cloudslice/Labguides/Usecase%2008/media/image36.png)
+
+    >[!Note] If the deployment fails with **RoleAssignmentExists**, a role from an earlier attempt is already assigned. Run `azd up` again. Resources that were already created are kept.
 
 1. Now the deployment is complete
 
