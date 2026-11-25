@@ -9,8 +9,7 @@ lab:
     - Azure
 -->
 
-# Usecase 01 - Create a Knowledge Assistant agent for HR in Copilot
-Studio that leverages Azure AI Search
+# Usecase 01 - Create a Knowledge Assistant agent for HR in Copilot Studio that leverages FoundryIQ
 
 **Objective:**
 
